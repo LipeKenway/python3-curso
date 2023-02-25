@@ -70,19 +70,21 @@ Operadores Úteis
 # s3 = s1 ^ s2
 # print(s3)
 """
+
+
 # Exemplo do uso dos sets
 
-letras = set()
+# letras = set()
 
-while True:
-    letra = input('Digite: ')
-    letras.add(letra.lower())
+# while True:
+#     letra = input('Digite: ')
+#     letras.add(letra.lower())
 
-    if 'l' in letras:
-        print('Achou :)')
-        break
+#     if 'l' in letras:
+#         print('Achou :)')
+#         break
 
-    print(letras)
+#     print(letras)
 
 
 
