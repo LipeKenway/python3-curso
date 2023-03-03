@@ -1,0 +1,3 @@
+"""
+raise -> Lançando exceções (erros)
+"""
