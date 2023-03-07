@@ -12,4 +12,10 @@
 * O Python conhece todos os modulos e pacotes presentes 
 * nos caminhos de sys.path
 """
+import arq_aula_modularizacao
+from arq_aula_modularizacao import soma, variavel_modulo
 
+# print('Este modulo se chama', __name__)
+print(variavel_modulo)
+print(soma(2, 3))
+print(arq_aula_modularizacao.soma(3, 3))
