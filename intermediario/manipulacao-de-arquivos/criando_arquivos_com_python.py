@@ -29,5 +29,4 @@
 # Vamos falar mais sobre o modulo JSON, mas:
     ! json.dump -> (gera um arquivo .json),
     ! json.load ->
-
 """
