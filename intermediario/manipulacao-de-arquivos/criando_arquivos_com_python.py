@@ -30,3 +30,12 @@
     ! json.dump -> (gera um arquivo .json),
     ! json.load ->
 """
+caminho_arquivo = 'C:\\Users\\lyppy\\Downloads\\Cursos\\python\\intermediario\\manipulacao-de-arquivos\\'
+caminho_arquivo += 'aula_teste.txt'
+
+# arquivo = open(caminho_arquivo, 'w')
+# arquivo.close()
+
+with open(caminho_arquivo, 'w') as arquivo:
+    print('Olá Mundo')
+    print('O arquivo vai ser fechado.')
