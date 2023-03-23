@@ -1,44 +1,10 @@
 """
-# Execicio -> Lista de tarefas com desfazer e refazer
-
-tarefas = [] -> lista de tarefas
-tarefas = ['Limpar a Casa'] -> Adicionei uma tarefa
-tarefas = ['Limpar a Casa', 'Caminhar'] -> Adicionei Caminhar
-
-desfazer = ['Limpar a Casa',] -> Refazer ['Caminhar']
-desfazer = [] -> Refazer ['Limpar a Casa', 'Caminhar']
-
-refazer = tarefas['Limpar a Casa']
-refazer = tarefas['Limpar a Casa', 'Caminhar']
+# Guard Clause
 """
 import os
-import json
-from time import sleep
 
-caminho_arquivo = r'C:\\Users\\lyppy\\Downloads\\Cursos\\python\\intermediario\\exercicios\\'
-caminho_arquivo += 'lista_de_tarefas.json'
-
-
-def ler(tarefas, caminho_arquivo):
-    dados = []
-    try:
-        with open(caminho_arquivo, 'r', encoding='utf8') as arquivo:
-            dados = json.load(arquivo)
-        return dados
-
-    except FileNotFoundError:
-        print('Arquivo JSON ainda não existe.')
-        print()
-        salvar(tarefas, caminho_arquivo)
-        print('Criando, arquivo JSON...')
-        print()
-        sleep(2)
-    return dados
-
-
-def salvar(tarefas, caminho_arquivo):
-    with open(caminho_arquivo, 'w', encoding='utf8') as arquivo:
-        json.dump(tarefas, arquivo, indent=2, ensure_ascii=False)
+tarefas = []
+tarefas_refazer = []
 
 
 def adicionar(tarefa, tarefas):
@@ -98,10 +64,6 @@ def refazer(tarefas, tarefas_refazer):
     print()
 
 
-tarefas = ler([], caminho_arquivo)
-tarefas_refazer = []
-
-
 while True:
     print('Comandos: Listar, Desfazer e Refazer')
     tarefa = input('Digite uma tarefa ou comando: ').capitalize()
@@ -118,4 +80,3 @@ while True:
         tarefa) is not None else comandos['Adicionar']
 
     comando()
-    salvar(tarefas, caminho_arquivo)
