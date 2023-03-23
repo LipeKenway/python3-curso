@@ -1,0 +1,4 @@
+1) PHP Programando com Orientação a Objetos
+2) Python Fluente
+3) Padrões de Projeto Soluções Reutilizáveis - GOF
+4) Patters of Enterprise Application Architecture
